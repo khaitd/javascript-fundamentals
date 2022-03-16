@@ -13,3 +13,37 @@ function quiz() {
 
 }
 
+const print = () => {
+    console.log('I love to print text!')
+}
+
+const functionA = (f) => {
+    f();
+    console.log('FUNCTION A HAS BEEN CALLED')
+    functionB();
+}
+
+
+
+
+const functionB = () => {
+    console.log('FUNCTION B HAS BEEN CALLED')
+}
+
+const functionC = () => {
+    console.log('FUNCTION C HAS BEEN CALLED')
+
+}
+
+const greet = (person) => {
+    console.log('HELLO', person)
+}
+
+const blender = (string) => {
+    return string.split('')
+}
+
+const square = (num, message) => {
+    console.log('Message:', message)
+    return num * num
+}
