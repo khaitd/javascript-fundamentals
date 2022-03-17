@@ -1,6 +1,6 @@
 const array = ['a', 'b', 'c']
 
-array.map((el){
+array.map((el) =>{
     return el.toUpperCase()
 })
 
