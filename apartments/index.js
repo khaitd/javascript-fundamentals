@@ -23,7 +23,11 @@ let apt1 = {
     windows: 0, 
     rent: 4500,
     unit: "1A",
-    tentants: tenant1
+    lease: function(tenant){
+        this.tenants.push(tenant)
+        console.log(`${tenant.name} has rented out ${this.unit}`)
+    },
+    tenants: []
 }
 
 let apt2 = { 
@@ -33,7 +37,7 @@ let apt2 = {
     windows: 0, 
     rent: 4500,
     unit: "1B",
-    tentants: tenant2
+    tenants: []
 }
 
 let apt3 = { 
@@ -43,7 +47,7 @@ let apt3 = {
     windows: 0, 
     rent: 4500,
     unit: "1C",
-    tentants: tenant2
+    tenants: []
 }
 
 
