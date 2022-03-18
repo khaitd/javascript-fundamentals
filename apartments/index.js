@@ -95,13 +95,3 @@ let user = {
     email: "abc123@example.com",
     lastLogin: "03/17/2022"
 }
-
-// function greet(){
-//     console.log("Hello World")
-// }
-
-const greet = () => {
-    console.log("Hello World")
-}
-
-let fruits = ["apples", "oranges", "bannanas", "tomatos", "kiwi"]
