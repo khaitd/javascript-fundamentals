@@ -1,0 +1,21 @@
+
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: courier;
+}
+
+section {
+    background-color: pink;
+}
+
+.text {
+    font-size: 2em;
+}
+
+h2[class^="header-"] {
+    text-align: center;
+}
+
