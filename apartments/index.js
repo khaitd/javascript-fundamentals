@@ -4,7 +4,8 @@ let tenant1 = {
     name: 'John Doe',
     creditScore: 400,
     salary: 15000,
-    age: 19
+    age: 19,
+    pet: 'Fido'
 }
 
 let tenant2 = {
@@ -64,11 +65,43 @@ let building = {
         if(apt.tenants.length === apt.bedrooms){
             return `${apt.unit} is already full`
         }
+        if (this.allowsPets == false && tenant.pet){
+            return `${apt.unit} is available but you have to put up ${tenant.pet} for adoption`
+        }
             apt.tenants.push(tenant)
             console.log(`${tenant.name} has rented out ${apt.unit}`)
         
+    },
+    occupiedApts: function() {
+        return this.apartments.filter((el) => {
+            return el.tenants.length > 0
+        })
+    },
+    fullApts: function() {
+        return this.apartments.filter((el) => {
+            return el.tenants.length === el.bedrooms
+        }
+
+        )
     },
     apartments: [apt1, apt2, apt3]
 }
 
 
+
+
+let user = {
+    username: "smith123",
+    email: "abc123@example.com",
+    lastLogin: "03/17/2022"
+}
+
+// function greet(){
+//     console.log("Hello World")
+// }
+
+const greet = () => {
+    console.log("Hello World")
+}
+
+let fruits = ["apples", "oranges", "bannanas", "tomatos", "kiwi"]
