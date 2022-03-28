@@ -88,10 +88,19 @@ let building = {
 }
 
 
+const div = document.getElementById('building')
 
-
-let user = {
-    username: "smith123",
-    email: "abc123@example.com",
-    lastLogin: "03/17/2022"
+const render = () => {
+    let h2 = document.createElement('h2')
+    h2.innerHTML = building.streetAddress
+    div.append(h2)
+    let ul = document.createElement('ul')
+    building.apartments.forEach((element) => {
+        let li = document.createElement('li')
+        li.innerHTML = element.unit
+        ul.append(li)
+    })
+    div.append(ul)
 }
+
+render()
