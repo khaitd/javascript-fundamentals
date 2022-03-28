@@ -97,7 +97,17 @@ const render = () => {
     let ul = document.createElement('ul')
     building.apartments.forEach((element) => {
         let li = document.createElement('li')
-        li.innerHTML = element.unit
+        let button = document.createElement('button')
+
+        button.innerText = 'RENT' + element.unit
+        li.innerText = `${element.unit} vacancies: ${element.bedrooms}`
+        
+        button.addEventListener('click', () => {
+            let vacancies = element.bedrooms - 1
+            li.innerText = `${element.unit} vacancies: ${vacancies}`
+        })
+
+        li.append(button)
         ul.append(li)
     })
     div.append(ul)
